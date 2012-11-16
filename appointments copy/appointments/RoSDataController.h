@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RoS.h"
+#import "System.h"
 
 @interface RoSDataController : NSObject
+@property (nonatomic, copy) NSMutableArray *masterRoSList;
+- (NSUInteger)countOfList;
+- (RoS *)objectInListAtIndex:(NSUInteger)theIndex;
+- (void)addRoSWithNewRoS:(RoS *)newRoS;
 
 @end
