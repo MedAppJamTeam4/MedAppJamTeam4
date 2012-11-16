@@ -15,6 +15,16 @@
 @property(nonatomic, copy) NSString *frequency;
 @property(nonatomic, copy) NSString *description;
 
+-(void)setDose:(NSString *)dose;
+-(void)setFrequency:(NSString *)frequency;
+-(void)setName:(NSString *)name;
+-(void)setDescription:(NSString *)description;
+
+-(NSString *)getDose;
+-(NSString *)getFrequency;
+-(NSString *)getName;
+-(NSString *)getDescription;
+
 -(id)initWithName:(NSString *)name Dose:(NSString *)dose Frequency:(NSString *)frequency Description:(NSString *)description;
 
 @end

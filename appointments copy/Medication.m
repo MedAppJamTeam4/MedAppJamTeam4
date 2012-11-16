@@ -25,5 +25,46 @@
     }
     return nil;
 }
+    -(void)setDose:(NSString *)dose
+    {
+        [self dose] = dose;
+    }
+    
+    -(void)setFrequency:(NSString *)frequency
+    {
+        [self frequency] = frequency;
+    }
+    
+    -(void)setName:(NSString *)name
+    {
+        [self name] = name;
+    }
+    
+    -(void)setDescription:(NSString *)description
+      {
+          [self description] = description;
+      }
+    
+    -(NSString *)getDose
+    {
+        return [self dose];
+    }
+    
+    -(NSString *)getFrequency
+    {
+        return [self frequency];
+    }
+    
+    
+    -(NSString *)getName
+    {
+        return [self name];
+    }
+    
+    -(NSString *)getDescription
+    {
+        return [self description];
+    }
+
 
 @end
