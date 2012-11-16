@@ -7,7 +7,7 @@
 //
 
 #import "BirdSighting.h"
-
+//This is a test from Erick!
 @implementation BirdSighting
 -(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date
 {
