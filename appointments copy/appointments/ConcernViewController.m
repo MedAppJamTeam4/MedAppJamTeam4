@@ -8,6 +8,7 @@
 
 #import "ConcernViewController.h"
 #import "NewConcernViewController.h"
+#import "ListedConcernViewController.h"
 
 @interface ConcernViewController ()
 
@@ -145,6 +146,14 @@
 //        BirdsDetailViewController *detailViewController = [segue destinationViewController];
 //        detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
 //    }
+    
+    if ([[segue identifier] isEqualToString:@"ShowInstanceList"]) {
+        
+        ListedConcernViewController *instanceViewController = [segue destinationViewController];
+        instanceViewController.passedConcern = [_dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        
+    }
+
 }
 
 - (IBAction)cancel:(UIStoryboardSegue *)segue

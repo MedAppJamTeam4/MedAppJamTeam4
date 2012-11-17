@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Concern.h"
+#import "Instance.h"
+#import "InstanceDataController.h"
+@class ConcernDataController;
 @interface ListedConcernViewController : UITableViewController
-
+@property (strong,nonatomic) InstanceDataController *dataController;
+@property (strong,nonatomic) Concern *passedConcern;
 @end

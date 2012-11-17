@@ -264,7 +264,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="kzM-Sx-97R" kind="push" id="IXX-Fr-QnM"/>
+                                    <segue destination="kzM-Sx-97R" kind="push" identifier="ShowInstanceList" id="IXX-Fr-QnM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -296,7 +296,7 @@
             </objects>
             <point key="canvasLocation" x="1369" y="-246"/>
         </scene>
-        <!--Listed Concern View Controller-->
+        <!--Listed Concern View Controller - Instances-->
         <scene sceneID="kLE-Fa-ZXV">
             <objects>
                 <tableViewController id="kzM-Sx-97R" customClass="ListedConcernViewController" sceneMemberID="viewController">
@@ -305,7 +305,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IndividualConcern" textLabel="aXJ-Ku-Gpz" detailTextLabel="dRq-02-BfP" style="IBUITableViewCellStyleSubtitle" id="BN3-pg-9OS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InstanceCell" textLabel="aXJ-Ku-Gpz" style="IBUITableViewCellStyleDefault" id="BN3-pg-9OS">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -313,13 +313,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXJ-Ku-Gpz">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRq-02-BfP">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -335,8 +330,7 @@
                             <outlet property="delegate" destination="kzM-Sx-97R" id="Uq7-0B-wFn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sPH-xP-jle">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Nfo-qP-KPB"/>
+                    <navigationItem key="navigationItem" title="Instances" id="sPH-xP-jle">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wSo-TU-dpi">
                             <connections>
                                 <segue destination="6l8-T5-CeP" kind="modal" identifier="NewConcernInd" id="xTl-v1-7VE"/>
@@ -824,7 +818,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConcernViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
             </relationships>
         </class>
         <class className="ListedConcernViewController" superclassName="UITableViewController">

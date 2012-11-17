@@ -11,6 +11,7 @@
 		2C0910B116570F0400A1799D /* AppointmentDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AB16570F0400A1799D /* AppointmentDataController.m */; };
 		2C0910B216570F0400A1799D /* Medication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AD16570F0400A1799D /* Medication.m */; };
 		2C0910B316570F0400A1799D /* MedicationDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AF16570F0400A1799D /* MedicationDataController.m */; };
+		2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4607CD165830CE0089F7FD /* InstanceDataController.m */; };
 		2C66E9BF16571DA2005EE003 /* Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9BE16571DA2005EE003 /* Instance.m */; };
 		2C66E9C516571DDE005EE003 /* Concern.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C216571DDE005EE003 /* Concern.m */; };
 		2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C416571DDE005EE003 /* ConcernDataController.m */; };
@@ -48,6 +49,8 @@
 		2C0910AD16570F0400A1799D /* Medication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Medication.m; sourceTree = "<group>"; };
 		2C0910AE16570F0400A1799D /* MedicationDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicationDataController.h; sourceTree = "<group>"; };
 		2C0910AF16570F0400A1799D /* MedicationDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicationDataController.m; sourceTree = "<group>"; };
+		2C4607CC165830CE0089F7FD /* InstanceDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDataController.h; sourceTree = "<group>"; };
+		2C4607CD165830CE0089F7FD /* InstanceDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDataController.m; sourceTree = "<group>"; };
 		2C66E9BD16571DA2005EE003 /* Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
 		2C66E9BE16571DA2005EE003 /* Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instance.m; sourceTree = "<group>"; };
 		2C66E9C116571DDE005EE003 /* Concern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concern.h; sourceTree = "<group>"; };
@@ -141,10 +144,14 @@
 				2C66E9C216571DDE005EE003 /* Concern.m */,
 				2C66E9C316571DDE005EE003 /* ConcernDataController.h */,
 				2C66E9C416571DDE005EE003 /* ConcernDataController.m */,
+				2C4607CC165830CE0089F7FD /* InstanceDataController.h */,
+				2C4607CD165830CE0089F7FD /* InstanceDataController.m */,
 				EC2CEBBE1655B28A000F2C5D /* ConcernViewController.h */,
 				EC2CEBBF1655B28A000F2C5D /* ConcernViewController.m */,
 				2C66E9D3165738D9005EE003 /* NewConcernViewController.h */,
 				2C66E9D4165738D9005EE003 /* NewConcernViewController.m */,
+				EC2CEBCD1655B73D000F2C5D /* ListedConcernViewController.h */,
+				EC2CEBCE1655B73E000F2C5D /* ListedConcernViewController.m */,
 			);
 			name = Concern;
 			sourceTree = "<group>";
@@ -201,8 +208,6 @@
 				2C66E9C816571E6A005EE003 /* Medication */,
 				2C66E9C916571E7E005EE003 /* Concern */,
 				2C66E9CA16571E93005EE003 /* RoS */,
-				EC2CEBCD1655B73D000F2C5D /* ListedConcernViewController.h */,
-				EC2CEBCE1655B73E000F2C5D /* ListedConcernViewController.m */,
 				EC2CEBAE1655B07E000F2C5D /* first.png */,
 				EC2CEBB01655B07E000F2C5D /* first@2x.png */,
 				EC2CEBB51655B07E000F2C5D /* second.png */,
@@ -315,6 +320,7 @@
 				2C66E9C516571DDE005EE003 /* Concern.m in Sources */,
 				2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */,
 				2C66E9D5165738D9005EE003 /* NewConcernViewController.m in Sources */,
+				2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

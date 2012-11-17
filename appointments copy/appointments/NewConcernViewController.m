@@ -14,7 +14,6 @@
 @end
 
 @implementation NewConcernViewController
-
 //- (id)initWithStyle:(UITableViewStyle)style
 //{
 //    self = [super initWithStyle:style];
