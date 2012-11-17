@@ -23,6 +23,47 @@
         return self;
     }
     return nil;
+ 
+}
+
+
+
+-(void)setLocation:(NSString *)location;
+{
+    self.location = location;
+}
+-(void)setDate:(NSDate *)date
+{
+    self.date = date;
+    
+}
+-(void)setDoctorName:(NSString *)doctorName
+{
+    self.doctorName=doctorName;
+}
+-(void)setPhoneNumber:(NSString *)phoneNumber
+{
+    self.phoneNumber = phoneNumber;
+}
+
+-(NSString *)getLocation
+{
+    return [self location];
+}
+
+-(NSDate *)getDate
+{
+    return [self date];
+}
+
+-(NSString *)geDoctorName
+{
+    return [self doctorName];
+}
+
+-(NSString *)getPhoneNumber
+{
+    return [self phoneNumber];
 }
 
 @end

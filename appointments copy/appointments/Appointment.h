@@ -15,6 +15,18 @@
 @property (nonatomic, copy) NSString *doctorName;
 @property (nonatomic, copy) NSString *phoneNumber;
 
+
+-(void)setLocation:(NSString *)location;
+-(void)setDate:(NSDate *)date;
+-(void)setDoctorName:(NSString *)doctorName;
+-(void)setPhoneNumber:(NSString *)phoneNumber;
+
+-(NSString *)getLocation;
+-(NSDate *)getDate;
+-(NSString *)geDoctorName;
+-(NSString *)getPhoneNumber;
+
+
 -(id)initWithDate:(NSDate *)date Location:(NSString *)location Doctor:(NSString *)doctorName PhoneNumber:(NSString *)phoneNumber;
 
 @end
