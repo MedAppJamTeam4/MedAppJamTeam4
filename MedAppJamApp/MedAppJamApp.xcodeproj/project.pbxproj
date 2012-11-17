@@ -27,6 +27,9 @@
 		498DE2C8165439F6006DEFCF /* MedAppJamAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 498DE2C7165439F6006DEFCF /* MedAppJamAppTests.m */; };
 		498DE2D3165467A6006DEFCF /* ConcernsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 498DE2D2165467A6006DEFCF /* ConcernsDataController.m */; };
 		498DE2D616546887006DEFCF /* Concerns.m in Sources */ = {isa = PBXBuildFile; fileRef = 498DE2D516546887006DEFCF /* Concerns.m */; };
+		49E4163B1656469100E9CE94 /* Incidents.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4163A1656469100E9CE94 /* Incidents.m */; };
+		49E4163F165648D000E9CE94 /* IncidentsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4163E165648D000E9CE94 /* IncidentsDataController.m */; };
+		49ECE1B91656FCD000D90E2D /* AddConcernsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ECE1B81656FCCF00D90E2D /* AddConcernsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,12 @@
 		498DE2D2165467A6006DEFCF /* ConcernsDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcernsDataController.m; sourceTree = "<group>"; };
 		498DE2D416546887006DEFCF /* Concerns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concerns.h; sourceTree = "<group>"; };
 		498DE2D516546887006DEFCF /* Concerns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concerns.m; sourceTree = "<group>"; };
+		49E416391656469100E9CE94 /* Incidents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Incidents.h; sourceTree = "<group>"; };
+		49E4163A1656469100E9CE94 /* Incidents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Incidents.m; sourceTree = "<group>"; };
+		49E4163D165648D000E9CE94 /* IncidentsDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentsDataController.h; sourceTree = "<group>"; };
+		49E4163E165648D000E9CE94 /* IncidentsDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentsDataController.m; sourceTree = "<group>"; };
+		49ECE1B71656FCCF00D90E2D /* AddConcernsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConcernsViewController.h; sourceTree = "<group>"; };
+		49ECE1B81656FCCF00D90E2D /* AddConcernsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConcernsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +140,16 @@
 				498DE29F165439F6006DEFCF /* ConcernsAppDelegate.h */,
 				498DE2A0165439F6006DEFCF /* ConcernsAppDelegate.m */,
 				498DE2A8165439F6006DEFCF /* MainStoryboard_iPhone.storyboard */,
+				49ECE1B71656FCCF00D90E2D /* AddConcernsViewController.h */,
+				49ECE1B81656FCCF00D90E2D /* AddConcernsViewController.m */,
 				498DE2D1165467A6006DEFCF /* ConcernsDataController.h */,
 				498DE2D2165467A6006DEFCF /* ConcernsDataController.m */,
 				498DE2D416546887006DEFCF /* Concerns.h */,
 				498DE2D516546887006DEFCF /* Concerns.m */,
+				49E416391656469100E9CE94 /* Incidents.h */,
+				49E4163A1656469100E9CE94 /* Incidents.m */,
+				49E4163D165648D000E9CE94 /* IncidentsDataController.h */,
+				49E4163E165648D000E9CE94 /* IncidentsDataController.m */,
 				498DE2AB165439F6006DEFCF /* MainStoryboard_iPad.storyboard */,
 				498DE2AE165439F6006DEFCF /* ConcernsMasterViewController.h */,
 				498DE2AF165439F6006DEFCF /* ConcernsMasterViewController.m */,
@@ -296,6 +311,9 @@
 				498DE2B3165439F6006DEFCF /* ConcernsDetailViewController.m in Sources */,
 				498DE2D3165467A6006DEFCF /* ConcernsDataController.m in Sources */,
 				498DE2D616546887006DEFCF /* Concerns.m in Sources */,
+				49E4163B1656469100E9CE94 /* Incidents.m in Sources */,
+				49E4163F165648D000E9CE94 /* IncidentsDataController.m in Sources */,
+				49ECE1B91656FCD000D90E2D /* AddConcernsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +498,7 @@
 				498DE2CD165439F6006DEFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		498DE2CE165439F6006DEFCF /* Build configuration list for PBXNativeTarget "MedAppJamAppTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +507,7 @@
 				498DE2D0165439F6006DEFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

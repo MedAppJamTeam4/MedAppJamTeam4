@@ -8,6 +8,8 @@
 
 #import "ConcernsDetailViewController.h"
 
+#import "Concerns.h"
+
 @interface ConcernsDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -17,10 +19,10 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setConcern:(Concerns *)newConcern
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_concern != newConcern) {
+        _concern = newConcern;
         
         // Update the view.
         [self configureView];
@@ -34,9 +36,19 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    Concerns *theConcern = self.concern;
+    
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+    }
+    
+    if (theConcern) {
+        self.concernNameLabel.text = theConcern.name;
+        self.locationLabel.text = theConcern.location;
+        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theConcern.date];
+        
     }
 }
 

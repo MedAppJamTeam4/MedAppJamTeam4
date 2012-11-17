@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConcernsDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@class Concerns;
 
-@property (strong, nonatomic) id detailItem;
+@interface ConcernsDetailViewController : UIViewController 
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) Concerns *concern;
+@property (weak, nonatomic) IBOutlet UILabel *concernNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end

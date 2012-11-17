@@ -1,14 +1,14 @@
 //
-//  Concerns.h
+//  Incidents.h
 //  MedAppJamApp
 //
-//  Created by marc wong on 11/14/12.
+//  Created by marc wong on 11/16/12.
 //  Copyright (c) 2012 marc wong. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Concerns : NSObject
+@interface Incidents : NSObject
 
 @property (nonatomic, copy) NSString *name;
 
