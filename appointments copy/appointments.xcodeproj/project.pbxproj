@@ -103,6 +103,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C66E9C716571E54005EE003 /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				2C0910A816570F0400A1799D /* Appointment.h */,
+				2C0910A916570F0400A1799D /* Appointment.m */,
+				2C0910AA16570F0400A1799D /* AppointmentDataController.h */,
+				2C0910AB16570F0400A1799D /* AppointmentDataController.m */,
+				EC2CEBC41655B2C0000F2C5D /* AppointmentsViewController.h */,
+				EC2CEBC51655B2C0000F2C5D /* AppointmentsViewController.m */,
+			);
+			name = Appointment;
+			sourceTree = "<group>";
+		};
+		2C66E9C816571E6A005EE003 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				2C0910AC16570F0400A1799D /* Medication.h */,
+				2C0910AD16570F0400A1799D /* Medication.m */,
+				2C0910AE16570F0400A1799D /* MedicationDataController.h */,
+				2C0910AF16570F0400A1799D /* MedicationDataController.m */,
+				EC2CEBC11655B2AA000F2C5D /* MedicationViewController.h */,
+				EC2CEBC21655B2AA000F2C5D /* MedicationViewController.m */,
+			);
+			name = Medication;
+			sourceTree = "<group>";
+		};
+		2C66E9C916571E7E005EE003 /* Concern */ = {
+			isa = PBXGroup;
+			children = (
+				2C66E9BD16571DA2005EE003 /* Instance.h */,
+				2C66E9BE16571DA2005EE003 /* Instance.m */,
+				2C66E9C116571DDE005EE003 /* Concerns.h */,
+				2C66E9C216571DDE005EE003 /* Concerns.m */,
+				2C66E9C316571DDE005EE003 /* ConcernsDataController.h */,
+				2C66E9C416571DDE005EE003 /* ConcernsDataController.m */,
+				EC2CEBBE1655B28A000F2C5D /* ConcernViewController.h */,
+				EC2CEBBF1655B28A000F2C5D /* ConcernViewController.m */,
+			);
+			name = Concern;
+			sourceTree = "<group>";
+		};
+		2C66E9CA16571E93005EE003 /* RoS */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A1B4D1656FAE000E8D798 /* RoS.h */,
+				2C6A1B4E1656FAE000E8D798 /* RoS.m */,
+				2C6A1B511656FCA300E8D798 /* System.h */,
+				2C6A1B521656FCA300E8D798 /* System.m */,
+				2C6A1B54165700CC00E8D798 /* RoSDataController.h */,
+				2C6A1B55165700CC00E8D798 /* RoSDataController.m */,
+				EC2CEBC71655B318000F2C5D /* RoSViewController.h */,
+				EC2CEBC81655B318000F2C5D /* RoSViewController.m */,
+			);
+			name = RoS;
+			sourceTree = "<group>";
+		};
 		EC2CEB811655B07E000F2C5D = {
 			isa = PBXGroup;
 			children = (
@@ -136,36 +192,12 @@
 				EC2CEB9F1655B07E000F2C5D /* ConcernAppDelegate.h */,
 				EC2CEBA01655B07E000F2C5D /* ConcernAppDelegate.m */,
 				EC2CEBA81655B07E000F2C5D /* MainStoryboard.storyboard */,
-				2C0910A816570F0400A1799D /* Appointment.h */,
-				2C0910A916570F0400A1799D /* Appointment.m */,
-				2C0910AA16570F0400A1799D /* AppointmentDataController.h */,
-				2C0910AB16570F0400A1799D /* AppointmentDataController.m */,
-				2C0910AC16570F0400A1799D /* Medication.h */,
-				2C66E9BD16571DA2005EE003 /* Instance.h */,
-				2C66E9BE16571DA2005EE003 /* Instance.m */,
-				2C0910AD16570F0400A1799D /* Medication.m */,
-				2C0910AE16570F0400A1799D /* MedicationDataController.h */,
-				2C0910AF16570F0400A1799D /* MedicationDataController.m */,
-				2C6A1B4D1656FAE000E8D798 /* RoS.h */,
-				2C6A1B4E1656FAE000E8D798 /* RoS.m */,
-				2C6A1B511656FCA300E8D798 /* System.h */,
-				2C6A1B521656FCA300E8D798 /* System.m */,
-				2C6A1B54165700CC00E8D798 /* RoSDataController.h */,
-				2C66E9C116571DDE005EE003 /* Concerns.h */,
-				2C66E9C216571DDE005EE003 /* Concerns.m */,
-				2C66E9C316571DDE005EE003 /* ConcernsDataController.h */,
-				2C66E9C416571DDE005EE003 /* ConcernsDataController.m */,
-				2C6A1B55165700CC00E8D798 /* RoSDataController.m */,
-				EC2CEBC11655B2AA000F2C5D /* MedicationViewController.h */,
-				EC2CEBC21655B2AA000F2C5D /* MedicationViewController.m */,
+				2C66E9C716571E54005EE003 /* Appointment */,
+				2C66E9C816571E6A005EE003 /* Medication */,
+				2C66E9C916571E7E005EE003 /* Concern */,
+				2C66E9CA16571E93005EE003 /* RoS */,
 				EC2CEBCD1655B73D000F2C5D /* ListedConcernViewController.h */,
 				EC2CEBCE1655B73E000F2C5D /* ListedConcernViewController.m */,
-				EC2CEBC71655B318000F2C5D /* RoSViewController.h */,
-				EC2CEBC81655B318000F2C5D /* RoSViewController.m */,
-				EC2CEBC41655B2C0000F2C5D /* AppointmentsViewController.h */,
-				EC2CEBC51655B2C0000F2C5D /* AppointmentsViewController.m */,
-				EC2CEBBE1655B28A000F2C5D /* ConcernViewController.h */,
-				EC2CEBBF1655B28A000F2C5D /* ConcernViewController.m */,
 				EC2CEBAE1655B07E000F2C5D /* first.png */,
 				EC2CEBB01655B07E000F2C5D /* first@2x.png */,
 				EC2CEBB51655B07E000F2C5D /* second.png */,
