@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Concern.h"
+
 @class Concern;
-@interface NewConcernViewController : UIViewController <UITextFieldDelegate>
+@interface NewConcernViewController : UIViewController <UITextFieldDelegate> {
+    UIDatePicker *datePicker;
+}
 @property (weak, nonatomic) IBOutlet UITextField *nameInput;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) Concern *myConcern;

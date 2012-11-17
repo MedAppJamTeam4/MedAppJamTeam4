@@ -19,7 +19,13 @@
 
 @implementation ConcernDataController
 
-
+- (id)init {
+    if (self = [super init]) {
+        [self initializeDefaultDataList];
+        return self;
+    }
+    return nil;
+}
 
 - (void)initializeDefaultDataList {
     NSMutableArray *concernsList = [[NSMutableArray alloc] init];
@@ -38,13 +44,7 @@
 }
 
 
-- (id)init {
-    if (self = [super init]) {
-        [self initializeDefaultDataList];
-        return self;
-    }
-    return nil;
-}
+
 
 
 - (NSUInteger)countOfList {

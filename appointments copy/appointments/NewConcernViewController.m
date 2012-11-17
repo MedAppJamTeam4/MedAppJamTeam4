@@ -7,6 +7,7 @@
 //
 
 #import "NewConcernViewController.h"
+#import "Concern.h"
 
 @interface NewConcernViewController ()
 
@@ -51,11 +52,16 @@
     if ([[segue identifier] isEqualToString:@"ReturnNewConcern"]) {
         if ([self.nameInput.text length]) {
             Concern *concern;
-            NSDate *today = [NSDate date];
+            //NSDate *today = [NSDate date];
             
             //Add date picker code!
             
-            concern = [[Concern alloc]initWithName:self.nameInput.text status:@"Current" date:today instances:nil isRoS:NO];
+            //NSLocale *usLocale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
+            
+            //NSDate *pickerDate = [datePicker date];
+            //NSString *dateString = [[NSString alloc]initWithFormat:@"%@",[pickerDate descriptionWithLocale:usLocale]];
+            
+            concern = [[Concern alloc]initWithName:self.nameInput.text status:@"Current" date:[self.datePicker date] instances:nil isRoS:NO];
             self.myConcern = concern;
         }
     }
