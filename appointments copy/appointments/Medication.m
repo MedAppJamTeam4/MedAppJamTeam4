@@ -27,22 +27,22 @@
 }
     -(void)setDose:(NSString *)dose
     {
-        [self dose] = dose;
+        _dose = dose;
     }
     
     -(void)setFrequency:(NSString *)frequency
     {
-        [self frequency] = frequency;
+        _frequency = frequency;
     }
     
     -(void)setName:(NSString *)name
     {
-        [self name] = name;
+        _name = name;
     }
     
     -(void)setDescription:(NSString *)description
       {
-          [self description] = description;
+          _description = description;
       }
     
     -(NSString *)getDose
