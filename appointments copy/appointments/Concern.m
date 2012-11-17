@@ -6,20 +6,21 @@
 //  Copyright (c) 2012 marc wong. All rights reserved.
 //
 
-#import "Concerns.h"
+#import "Concern.h"
 
 
-@implementation Concerns
+@implementation Concern
 
 
-- (id)initWithName:(NSString *)name status:(NSString *)status date:(NSDate *)startDate instances:(NSMutableArray *)instances{
+- (id)initWithName:(NSString *)name status:(NSString *)status date:(NSDate *)date instances:(NSMutableArray *)instances isRoS:(BOOL)isRoS{
     
     self = [super init];
     if (self) {
         _name = name;
         _status = status;
-        _startDate = startDate;
+        _date = date;
         _instances = instances;
+        _isRoS = isRoS;
         return self;
     }
     return nil;

@@ -8,17 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "Instance.h"
+#import "RoS.h"
 
-@interface Concerns : NSObject
+
+@interface Concern : NSObject
 
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, copy) NSString *status;
 
-@property (nonatomic, copy) NSDate *startDate;
+@property (nonatomic, copy) NSDate *date;
 
 @property (nonatomic, copy) NSMutableArray *instances;
 
-- (id)initWithName:(NSString *)name status:(NSString *)status date:(NSDate *)startDate instances:(NSMutableArray *)instances;
+@property BOOL isRoS;
+
+- (id)initWithName:(NSString *)name status:(NSString *)status date:(NSDate *)date instances:(NSMutableArray *)instances isRoS:(BOOL)isRoS;
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Concern.h"
+#import "ConcernDataController.h"
+@class ConcernDataController;
 @interface ConcernViewController : UITableViewController
-
+@property (strong,nonatomic) ConcernDataController *dataController;
 @end

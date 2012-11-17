@@ -1,5 +1,5 @@
 //
-//  ConcernsDataController.h
+//  ConcernDataController.h
 //  MedAppJamApp
 //
 //  Created by marc wong on 11/14/12.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class Concerns;
+@class Concern;
 
-@interface ConcernsDataController : NSObject
+@interface ConcernDataController : NSObject
 
 @property (nonatomic, copy) NSMutableArray *masterConcernsList;
 - (NSUInteger)countOfList;
-- (Concerns *)objectInListAtIndex:(NSUInteger)theIndex;
-- (void)addConcernWithConcern:(Concerns *)concern;
+- (Concern *)objectInListAtIndex:(NSUInteger)theIndex;
+- (void)addConcernWithConcern:(Concern *)concern;
 
 @end

@@ -12,8 +12,9 @@
 		2C0910B216570F0400A1799D /* Medication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AD16570F0400A1799D /* Medication.m */; };
 		2C0910B316570F0400A1799D /* MedicationDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AF16570F0400A1799D /* MedicationDataController.m */; };
 		2C66E9BF16571DA2005EE003 /* Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9BE16571DA2005EE003 /* Instance.m */; };
-		2C66E9C516571DDE005EE003 /* Concerns.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C216571DDE005EE003 /* Concerns.m */; };
-		2C66E9C616571DDE005EE003 /* ConcernsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C416571DDE005EE003 /* ConcernsDataController.m */; };
+		2C66E9C516571DDE005EE003 /* Concern.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C216571DDE005EE003 /* Concern.m */; };
+		2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C416571DDE005EE003 /* ConcernDataController.m */; };
+		2C66E9D5165738D9005EE003 /* NewConcernViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9D4165738D9005EE003 /* NewConcernViewController.m */; };
 		2C6A1B4F1656FAE000E8D798 /* RoS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B4E1656FAE000E8D798 /* RoS.m */; };
 		2C6A1B531656FCA300E8D798 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B521656FCA300E8D798 /* System.m */; };
 		2C6A1B56165700CC00E8D798 /* RoSDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B55165700CC00E8D798 /* RoSDataController.m */; };
@@ -49,10 +50,12 @@
 		2C0910AF16570F0400A1799D /* MedicationDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicationDataController.m; sourceTree = "<group>"; };
 		2C66E9BD16571DA2005EE003 /* Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
 		2C66E9BE16571DA2005EE003 /* Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instance.m; sourceTree = "<group>"; };
-		2C66E9C116571DDE005EE003 /* Concerns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concerns.h; sourceTree = "<group>"; };
-		2C66E9C216571DDE005EE003 /* Concerns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concerns.m; sourceTree = "<group>"; };
-		2C66E9C316571DDE005EE003 /* ConcernsDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcernsDataController.h; sourceTree = "<group>"; };
-		2C66E9C416571DDE005EE003 /* ConcernsDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcernsDataController.m; sourceTree = "<group>"; };
+		2C66E9C116571DDE005EE003 /* Concern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concern.h; sourceTree = "<group>"; };
+		2C66E9C216571DDE005EE003 /* Concern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concern.m; sourceTree = "<group>"; };
+		2C66E9C316571DDE005EE003 /* ConcernDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcernDataController.h; sourceTree = "<group>"; };
+		2C66E9C416571DDE005EE003 /* ConcernDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcernDataController.m; sourceTree = "<group>"; };
+		2C66E9D3165738D9005EE003 /* NewConcernViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewConcernViewController.h; sourceTree = "<group>"; };
+		2C66E9D4165738D9005EE003 /* NewConcernViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewConcernViewController.m; sourceTree = "<group>"; };
 		2C6A1B4D1656FAE000E8D798 /* RoS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoS.h; sourceTree = "<group>"; };
 		2C6A1B4E1656FAE000E8D798 /* RoS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoS.m; sourceTree = "<group>"; };
 		2C6A1B511656FCA300E8D798 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
@@ -134,12 +137,14 @@
 			children = (
 				2C66E9BD16571DA2005EE003 /* Instance.h */,
 				2C66E9BE16571DA2005EE003 /* Instance.m */,
-				2C66E9C116571DDE005EE003 /* Concerns.h */,
-				2C66E9C216571DDE005EE003 /* Concerns.m */,
-				2C66E9C316571DDE005EE003 /* ConcernsDataController.h */,
-				2C66E9C416571DDE005EE003 /* ConcernsDataController.m */,
+				2C66E9C116571DDE005EE003 /* Concern.h */,
+				2C66E9C216571DDE005EE003 /* Concern.m */,
+				2C66E9C316571DDE005EE003 /* ConcernDataController.h */,
+				2C66E9C416571DDE005EE003 /* ConcernDataController.m */,
 				EC2CEBBE1655B28A000F2C5D /* ConcernViewController.h */,
 				EC2CEBBF1655B28A000F2C5D /* ConcernViewController.m */,
+				2C66E9D3165738D9005EE003 /* NewConcernViewController.h */,
+				2C66E9D4165738D9005EE003 /* NewConcernViewController.m */,
 			);
 			name = Concern;
 			sourceTree = "<group>";
@@ -307,8 +312,9 @@
 				2C0910B216570F0400A1799D /* Medication.m in Sources */,
 				2C0910B316570F0400A1799D /* MedicationDataController.m in Sources */,
 				2C66E9BF16571DA2005EE003 /* Instance.m in Sources */,
-				2C66E9C516571DDE005EE003 /* Concerns.m in Sources */,
-				2C66E9C616571DDE005EE003 /* ConcernsDataController.m in Sources */,
+				2C66E9C516571DDE005EE003 /* Concern.m in Sources */,
+				2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */,
+				2C66E9D5165738D9005EE003 /* NewConcernViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
