@@ -321,7 +321,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="QL0-gQ-0e7" kind="push" id="blS-4K-MZk"/>
+                                    <segue destination="QL0-gQ-0e7" kind="push" identifier="ShowInstanceDetail" id="blS-4K-MZk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -718,10 +718,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2746" y="-79"/>
         </scene>
-        <!--View Controller - Concern-->
+        <!--Instance Detail View Controller - Instance-->
         <scene sceneID="DJV-Pp-cDA">
             <objects>
-                <viewController id="QL0-gQ-0e7" sceneMemberID="viewController">
+                <viewController id="QL0-gQ-0e7" customClass="InstanceDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OaC-9L-Rh2">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -760,7 +760,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="64T-mK-Lb5" firstAttribute="baseline" secondItem="pe4-bI-Kq4" secondAttribute="baseline" type="default" id="1qW-li-lVX"/>
                             <constraint firstItem="pMM-dN-Dyu" firstAttribute="top" secondItem="tZO-ac-r1a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5NK-Gg-u3M"/>
@@ -775,10 +775,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="BTq-xf-FRf" firstAttribute="leading" secondItem="OaC-9L-Rh2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uwB-KJ-ffy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Concern" id="oUf-65-8oP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ddc-Mb-NDV"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="WJH-2t-O2D"/>
+                    <navigationItem key="navigationItem" title="Instance" id="oUf-65-8oP">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lAp-oZ-p2H"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="UGN-Yz-MQX"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="instanceDate" destination="64T-mK-Lb5" id="rNh-Qv-CX5"/>
+                        <outlet property="instanceText" destination="tZO-ac-r1a" id="rzF-BD-eMf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZh-x1-xj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -830,6 +834,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="InstanceDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InstanceDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="instanceDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="instanceText" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="ListedConcernViewController" superclassName="UITableViewController">

@@ -9,6 +9,7 @@
 #import "ListedConcernViewController.h"
 #import "ConcernViewController.h"
 #import "NewInstanceViewController.h"
+#import "InstanceDetailViewController.h"
 
 @interface ListedConcernViewController ()
 
@@ -138,6 +139,22 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+#pragma mark - Segues and Unwinds
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([[segue identifier] isEqualToString:@"ShowInstanceDetail"]) {
+        
+        InstanceDetailViewController *instanceViewController = [segue destinationViewController];
+        instanceViewController.passedInstance = [_passedConcern.instances objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        //[_dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        
+    }
+    
+}
+
 
 - (IBAction)cancel:(UIStoryboardSegue *)segue {
     if ([[segue identifier]isEqualToString:@"CancelInstance"]) {

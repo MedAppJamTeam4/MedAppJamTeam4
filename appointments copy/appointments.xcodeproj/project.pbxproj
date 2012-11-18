@@ -20,6 +20,7 @@
 		2C6A1B4F1656FAE000E8D798 /* RoS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B4E1656FAE000E8D798 /* RoS.m */; };
 		2C6A1B531656FCA300E8D798 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B521656FCA300E8D798 /* System.m */; };
 		2C6A1B56165700CC00E8D798 /* RoSDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B55165700CC00E8D798 /* RoSDataController.m */; };
+		2C99E970165868F500211AEE /* InstanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99E96F165868F400211AEE /* InstanceDetailViewController.m */; };
 		EC2CEB911655B07E000F2C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB901655B07E000F2C5D /* UIKit.framework */; };
 		EC2CEB931655B07E000F2C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB921655B07E000F2C5D /* Foundation.framework */; };
 		EC2CEB951655B07E000F2C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB941655B07E000F2C5D /* CoreGraphics.framework */; };
@@ -68,6 +69,8 @@
 		2C6A1B521656FCA300E8D798 /* System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
 		2C6A1B54165700CC00E8D798 /* RoSDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoSDataController.h; sourceTree = "<group>"; };
 		2C6A1B55165700CC00E8D798 /* RoSDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoSDataController.m; sourceTree = "<group>"; };
+		2C99E96E165868F400211AEE /* InstanceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDetailViewController.h; sourceTree = "<group>"; };
+		2C99E96F165868F400211AEE /* InstanceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDetailViewController.m; sourceTree = "<group>"; };
 		EC2CEB8C1655B07E000F2C5D /* appointments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appointments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2CEB901655B07E000F2C5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC2CEB921655B07E000F2C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,8 @@
 				2C4607D416583E7C0089F7FD /* NewInstanceViewController.m */,
 				EC2CEBCD1655B73D000F2C5D /* ListedConcernViewController.h */,
 				EC2CEBCE1655B73E000F2C5D /* ListedConcernViewController.m */,
+				2C99E96E165868F400211AEE /* InstanceDetailViewController.h */,
+				2C99E96F165868F400211AEE /* InstanceDetailViewController.m */,
 			);
 			name = Concern;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				2C66E9D5165738D9005EE003 /* NewConcernViewController.m in Sources */,
 				2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */,
 				2C4607D516583E7D0089F7FD /* NewInstanceViewController.m in Sources */,
+				2C99E970165868F500211AEE /* InstanceDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
