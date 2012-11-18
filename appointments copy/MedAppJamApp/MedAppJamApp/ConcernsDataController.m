@@ -1,38 +1,32 @@
 //
-//  ConcernDataController.m
+//  ConcernsDataController.m
 //  MedAppJamApp
 //
 //  Created by marc wong on 11/14/12.
 //  Copyright (c) 2012 marc wong. All rights reserved.
 //
 
-#import "ConcernDataController.h"
+#import "ConcernsDataController.h"
 
-#import "Concern.h"
+#import "Concerns.h"
 
 
-@interface ConcernDataController ()
+@interface ConcernsDataController ()
 - (void)initializeDefaultDataList;
 @end
 
 
 
-@implementation ConcernDataController
+@implementation ConcernsDataController
 
-- (id)init {
-    if (self = [super init]) {
-        [self initializeDefaultDataList];
-        return self;
-    }
-    return nil;
-}
+
 
 - (void)initializeDefaultDataList {
     NSMutableArray *concernsList = [[NSMutableArray alloc] init];
     self.masterConcernsList = concernsList;
-    Concern *concern;
+    Concerns *concern;
     NSDate *today = [NSDate date];
-    concern = [[Concern alloc] initWithName:@"My Head" status:@"Addressed" date:today instances:nil isRoS:NO];
+    concern = [[Concerns alloc] initWithName:@"First Concern" location:@"My head" date:today];
     [self addConcernWithConcern:concern];
 }
 
@@ -43,10 +37,14 @@
     }
 }
 
-- (void)setToAddressed:(Concern *)concern {
-    concern.status = @"Addressed";
-}
 
+- (id)init {
+    if (self = [super init]) {
+        [self initializeDefaultDataList];
+        return self;
+    }
+    return nil;
+}
 
 
 - (NSUInteger)countOfList {
@@ -54,11 +52,11 @@
 }
 
 
-- (Concern *)objectInListAtIndex:(NSUInteger)theIndex {
+- (Concerns *)objectInListAtIndex:(NSUInteger)theIndex {
     return [self.masterConcernsList objectAtIndex:theIndex];
 }
 
-- (void)addConcernWithConcern:(Concern *)concern {
+- (void)addConcernWithConcern:(Concerns *)concern {
     [self.masterConcernsList addObject:concern];
 
 }

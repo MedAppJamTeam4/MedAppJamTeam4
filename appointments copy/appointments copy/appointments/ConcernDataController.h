@@ -16,7 +16,5 @@
 - (NSUInteger)countOfList;
 - (Concern *)objectInListAtIndex:(NSUInteger)theIndex;
 - (void)addConcernWithConcern:(Concern *)concern;
-- (void)setToAddressed:(Concern *)concern;
-
 
 @end

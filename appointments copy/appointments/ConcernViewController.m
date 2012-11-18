@@ -15,15 +15,15 @@
 @end
 
 @implementation ConcernViewController
-//
-//- (id)initWithStyle:(UITableViewStyle)style
-//{
-//    self = [super initWithStyle:style];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
+@synthesize myTableView;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -35,7 +35,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.myTableView.allowsMultipleSelectionDuringEditing = YES;
+    current = [[NSMutableArray alloc]init];
+    for (int i =0; i < [self.dataController.masterConcernsList count]; i++) {
+        if ([[[self.dataController.masterConcernsList objectAtIndex:i] status] isEqualToString:@"Current"]) {
+            [current addObject:[self.dataController.masterConcernsList objectAtIndex:i]];
+        }
+    }
+    //myTableView.allowsMultipleSelectionDuringEditing = YES;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -43,6 +51,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    current = [[NSMutableArray alloc]init];
+    for (int i =0; i < [self.dataController.masterConcernsList count]; i++) {
+        if ([[[self.dataController.masterConcernsList objectAtIndex:i] status] isEqualToString:@"Current"]) {
+            [current addObject:[self.dataController.masterConcernsList objectAtIndex:i]];
+        }
+    }
+    [self.myTableView reloadData];
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -62,7 +80,11 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.dataController countOfList];
+    if (selectedSegment == 0) {
+        return [current count];
+    } else { // if (selectedSegment == 1)
+        return [self.dataController countOfList];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,14 +100,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-//    BirdSighting *sightingAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-//    [[cell textLabel] setText:sightingAtIndex.name];
-//    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)sightingAtIndex.date]];
 
-    Concern *concernAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-    [[cell textLabel] setText:concernAtIndex.name];
-    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)concernAtIndex.date]];
-    return cell;
+    if (selectedSegment == 0){
+        Concern *currentConcern = [current objectAtIndex:indexPath.row];
+        [[cell textLabel] setText:currentConcern.name];
+        [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)currentConcern.date]];
+        [cell.textLabel setTextColor:[UIColor blackColor]];
+        
+    } else if (selectedSegment == 1) {
+        Concern *concernAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+        [[cell textLabel] setText:concernAtIndex.name];
+        [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)concernAtIndex.date]];
+        if ([concernAtIndex.status isEqualToString:@"Addressed"]) {
+            [cell.textLabel setTextColor:[UIColor redColor]];
+        }
+    }
+     return cell;
 }
 
 
@@ -93,7 +123,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return NO;
+    return YES;
 }
 
 
@@ -131,13 +161,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if ([self.myTableView isEditing]) {
+        //selected = [[NSArray alloc]initWithArray:[self.myTableView indexPathsForSelectedRows]];
+        NSLog(@"Selecting Rows!");
+    } else {
+//        ListedConcernViewController *instanceViewController = [[ListedConcernViewController alloc]init];
+//        instanceViewController.passedConcern = [_dataController objectInListAtIndex:[self.myTableView indexPathForSelectedRow].row];
+        [self performSegueWithIdentifier:@"ShowInstanceList" sender:self];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -146,7 +177,7 @@
     if ([[segue identifier] isEqualToString:@"ShowInstanceList"]) {
         
         ListedConcernViewController *instanceViewController = [segue destinationViewController];
-        instanceViewController.passedConcern = [_dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        instanceViewController.passedConcern = [_dataController objectInListAtIndex:[self.myTableView indexPathForSelectedRow].row];
         
     }
 
@@ -166,10 +197,105 @@
         NewConcernViewController *addController = [segue sourceViewController];
         if (addController.myConcern) {
             [self.dataController addConcernWithConcern:addController.myConcern];
-            [[self tableView] reloadData];
+            [self.myTableView reloadData];
         }
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
+#pragma mark - TableView Edit methods
+// Override to support editing the table view.
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    if(editing)
+    {
+        [self.myTableView setEditing:YES animated:YES];
+         
+        self.tabBarController.tabBar.hidden = YES;
+        //Make a toolbar and add it to the view
+        UIToolbar *bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 323, 320, 44)];
+        bottomToolbar.tag = 1001;
+        
+        //Add buttons to the toolbar
+        UIBarButtonItem *shareButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Share" style:UIBarButtonItemStyleBordered target:self action:@selector(share)];
+        
+        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+        
+        UIBarButtonItem *addressedButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Addressed" style:UIBarButtonItemStyleBordered target:self action:@selector(addressed)];
+        
+        UIBarButtonItem *flexibleSpace2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+
+        UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Delete" style:UIBarButtonItemStyleBordered target:self action:@selector(deleted)];
+
+        
+//        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+//                                                                                       target:self
+//                                                                                       action:@selector(deleteButtonPressed)];
+        
+        [self.view addSubview:bottomToolbar];
+        //[self.navigationController.view addSubview:bottomToolbar];
+        
+        NSArray *items = [NSArray arrayWithObjects:shareButtonItem,flexibleSpace,addressedButtonItem,flexibleSpace2,deleteButtonItem, nil];
+        [bottomToolbar setItems:items];
+    }
+    else
+    {
+        self.tabBarController.tabBar.hidden = NO;
+        //Remove the toolbar
+         
+        for(UIView *view in self.view.subviews)
+        {
+            if(view.tag == 1001)
+                [view removeFromSuperview];
+        }
+        [self.myTableView setEditing:NO animated:YES];
+    }
+}
+
+- (void)share {
+    NSLog(@"Share!");
+}
+
+- (void)addressed {
+    NSLog(@"Addressed!");
+    selected = [[NSArray alloc]initWithArray:[self.myTableView indexPathsForSelectedRows]];
+    NSMutableArray *selectedConcerns = [[NSMutableArray alloc]init];
+    for (int i =0; i < [selected count]; i++) {
+        [selectedConcerns addObject:[self.dataController.masterConcernsList objectAtIndex:[[selected objectAtIndex:i]row]]];
+    }
+    
+    for (Concern *c in selected) {
+        if ([current containsObject:c]) {
+            [current removeObject:c];
+        }
+    }
+    for (int i = 0; i < [selected count]; i++) {
+        [self.dataController setToAddressed:[self.dataController.masterConcernsList objectAtIndex:[[selected objectAtIndex:i]row]]];
+        NSLog(@"%@",[[self.dataController.masterConcernsList objectAtIndex:i] status]);
+    }
+    
+    [self.myTableView reloadData];
+}
+
+- (void)deleted {
+    NSLog(@"Deleted!");
+}
+
+- (IBAction)segmentAction:(id)sender {
+//    for (int i =0; i < [self.dataController.masterConcernsList count]; i++) {
+//        if ([[[self.dataController.masterConcernsList objectAtIndex:i] status] isEqualToString:@"Current"]) {
+//            [current addObject:[self.dataController.masterConcernsList objectAtIndex:i]];
+//        }
+//    }
+    UISegmentedControl *segmentSender = sender;
+    selectedSegment = [segmentSender selectedSegmentIndex];
+    [self.myTableView reloadData];
+    
+}
 @end
