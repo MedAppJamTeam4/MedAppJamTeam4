@@ -8,6 +8,7 @@
 
 #import "ListedConcernViewController.h"
 #import "ConcernViewController.h"
+#import "NewInstanceViewController.h"
 
 @interface ListedConcernViewController ()
 
@@ -61,7 +62,8 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [_dataController countOfMasterInstanceList];
+    //return [_dataController countOfMasterInstanceList];
+    return [_passedConcern.instances count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,7 +79,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    Instance *instanceAtIndex = [_dataController objectInMasterInstanceListAtIndex:indexPath.row];
+//    Instance *instanceAtIndex = [_dataController objectInMasterInstanceListAtIndex:indexPath.row];
+    Instance *instanceAtIndex = [_passedConcern.instances objectAtIndex:indexPath.row];
     [cell.textLabel setText:[formatter stringFromDate:(NSDate *)instanceAtIndex.date]];
     
     
@@ -134,6 +137,35 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (IBAction)cancel:(UIStoryboardSegue *)segue {
+    if ([[segue identifier]isEqualToString:@"CancelInstance"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnNewInstance"]) {
+        
+        NewInstanceViewController *addController = [segue sourceViewController];
+        if (addController.myInstance) {
+            //[self.dataController addMasterInstanceListObject:addController.myInstance];
+            if ([_passedConcern.instances count] == 0) {
+                NSMutableArray *newArray = [NSMutableArray arrayWithObject:addController.myInstance];
+                _passedConcern.instances = [[NSMutableArray alloc]initWithArray:newArray];
+            } else {
+                NSMutableArray *newArray = [[NSMutableArray alloc]initWithArray:_passedConcern.instances];
+                [newArray addObject:addController.myInstance];
+                _passedConcern.instances = [[NSMutableArray alloc]initWithArray:newArray];                  
+            }
+//            NSLog(@"%@",[[_passedConcern.instances objectAtIndex:0] date] );
+//            NSLog(@"%@",[[_passedConcern.instances objectAtIndex:0] descriptionText] );
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 }
 
 @end

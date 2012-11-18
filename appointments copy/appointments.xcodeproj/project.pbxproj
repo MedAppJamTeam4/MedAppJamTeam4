@@ -12,6 +12,7 @@
 		2C0910B216570F0400A1799D /* Medication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AD16570F0400A1799D /* Medication.m */; };
 		2C0910B316570F0400A1799D /* MedicationDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0910AF16570F0400A1799D /* MedicationDataController.m */; };
 		2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4607CD165830CE0089F7FD /* InstanceDataController.m */; };
+		2C4607D516583E7D0089F7FD /* NewInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4607D416583E7C0089F7FD /* NewInstanceViewController.m */; };
 		2C66E9BF16571DA2005EE003 /* Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9BE16571DA2005EE003 /* Instance.m */; };
 		2C66E9C516571DDE005EE003 /* Concern.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C216571DDE005EE003 /* Concern.m */; };
 		2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66E9C416571DDE005EE003 /* ConcernDataController.m */; };
@@ -51,6 +52,8 @@
 		2C0910AF16570F0400A1799D /* MedicationDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicationDataController.m; sourceTree = "<group>"; };
 		2C4607CC165830CE0089F7FD /* InstanceDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDataController.h; sourceTree = "<group>"; };
 		2C4607CD165830CE0089F7FD /* InstanceDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDataController.m; sourceTree = "<group>"; };
+		2C4607D316583E7C0089F7FD /* NewInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewInstanceViewController.h; sourceTree = "<group>"; };
+		2C4607D416583E7C0089F7FD /* NewInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewInstanceViewController.m; sourceTree = "<group>"; };
 		2C66E9BD16571DA2005EE003 /* Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
 		2C66E9BE16571DA2005EE003 /* Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instance.m; sourceTree = "<group>"; };
 		2C66E9C116571DDE005EE003 /* Concern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concern.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				EC2CEBBF1655B28A000F2C5D /* ConcernViewController.m */,
 				2C66E9D3165738D9005EE003 /* NewConcernViewController.h */,
 				2C66E9D4165738D9005EE003 /* NewConcernViewController.m */,
+				2C4607D316583E7C0089F7FD /* NewInstanceViewController.h */,
+				2C4607D416583E7C0089F7FD /* NewInstanceViewController.m */,
 				EC2CEBCD1655B73D000F2C5D /* ListedConcernViewController.h */,
 				EC2CEBCE1655B73E000F2C5D /* ListedConcernViewController.m */,
 			);
@@ -321,6 +326,7 @@
 				2C66E9C616571DDE005EE003 /* ConcernDataController.m in Sources */,
 				2C66E9D5165738D9005EE003 /* NewConcernViewController.m in Sources */,
 				2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */,
+				2C4607D516583E7D0089F7FD /* NewInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +374,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -389,7 +395,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -402,6 +408,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "appointments/appointments-Prefix.pch";
 				INFOPLIST_FILE = "appointments/appointments-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,6 +420,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "appointments/appointments-Prefix.pch";
 				INFOPLIST_FILE = "appointments/appointments-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

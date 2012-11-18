@@ -333,7 +333,7 @@
                     <navigationItem key="navigationItem" title="Instances" id="sPH-xP-jle">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wSo-TU-dpi">
                             <connections>
-                                <segue destination="6l8-T5-CeP" kind="modal" identifier="NewConcernInd" id="xTl-v1-7VE"/>
+                                <segue destination="6l8-T5-CeP" kind="modal" identifier="NewInstance" id="xTl-v1-7VE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -342,44 +342,55 @@
             </objects>
             <point key="canvasLocation" x="2017" y="-239"/>
         </scene>
-        <!--View Controller - New Concern-->
+        <!--New Instance View Controller - New Instance-->
         <scene sceneID="JAE-6Q-f12">
             <objects>
-                <viewController id="10f-iu-u0U" sceneMemberID="viewController">
+                <viewController id="10f-iu-u0U" customClass="NewInstanceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ghw-Vd-3lZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8r-6j-kuT">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUk-OW-1f9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-Sf-C1G">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="243" id="Wmq-RG-Vcu"/>
+                                    <constraint firstAttribute="width" constant="280" type="user" id="DgN-Ng-z4k"/>
+                                    <constraint firstAttribute="height" constant="188" id="UZm-bo-JUs"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUk-OW-1f9">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T8r-6j-kuT" firstAttribute="top" secondItem="JUk-OW-1f9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Iz0-3V-OcU"/>
-                            <constraint firstItem="T8r-6j-kuT" firstAttribute="trailing" secondItem="Ghw-Vd-3lZ" secondAttribute="trailing" type="default" id="Jsn-ch-Epz"/>
+                            <constraint firstItem="Lv7-Sf-C1G" firstAttribute="top" secondItem="JUk-OW-1f9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FD2-eq-Ybh"/>
                             <constraint firstItem="JUk-OW-1f9" firstAttribute="top" secondItem="Ghw-Vd-3lZ" secondAttribute="top" constant="12" id="YNE-Ks-N6D"/>
                             <constraint firstItem="JUk-OW-1f9" firstAttribute="leading" secondItem="Ghw-Vd-3lZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ffm-lu-svO"/>
-                            <constraint firstItem="T8r-6j-kuT" firstAttribute="leading" secondItem="Ghw-Vd-3lZ" secondAttribute="leading" type="default" id="opO-d5-gNY"/>
+                            <constraint firstItem="Lv7-Sf-C1G" firstAttribute="leading" secondItem="Ghw-Vd-3lZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o30-uy-5JM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Concern" id="4Bk-9X-SnV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JXB-lF-UjV"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cJj-yP-FsU"/>
+                    <navigationItem key="navigationItem" title="New Instance" id="4Bk-9X-SnV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JXB-lF-UjV">
+                            <connections>
+                                <segue destination="Hvk-4f-Dp8" kind="unwind" identifier="CancelInstance" unwindAction="cancel:" id="Tfr-1Y-JHd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cJj-yP-FsU">
+                            <connections>
+                                <segue destination="Hvk-4f-Dp8" kind="unwind" identifier="ReturnNewInstance" unwindAction="done:" id="kKi-An-wZI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inputText" destination="Lv7-Sf-C1G" id="kWe-mu-WZz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2z-ZQ-0Qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Hvk-4f-Dp8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3272" y="-79"/>
         </scene>
@@ -818,10 +829,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConcernViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
             </relationships>
         </class>
         <class className="ListedConcernViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListedConcernViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
         </class>
         <class className="MedicationViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MedicationViewController.h"/>
@@ -834,6 +850,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
                 <relationship kind="outlet" name="nameInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NewInstanceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewInstanceViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inputText" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="RoSViewController" superclassName="UIPageViewController">
