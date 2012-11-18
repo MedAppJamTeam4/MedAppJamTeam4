@@ -21,6 +21,8 @@
 		2C6A1B531656FCA300E8D798 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B521656FCA300E8D798 /* System.m */; };
 		2C6A1B56165700CC00E8D798 /* RoSDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A1B55165700CC00E8D798 /* RoSDataController.m */; };
 		2C99E970165868F500211AEE /* InstanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99E96F165868F400211AEE /* InstanceDetailViewController.m */; };
+		2CEB87F81658F55B00926570 /* AddMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB87F51658F55B00926570 /* AddMedicationViewController.m */; };
+		2CEB87F91658F55B00926570 /* SingleMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB87F71658F55B00926570 /* SingleMedicationViewController.m */; };
 		EC2CEB911655B07E000F2C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB901655B07E000F2C5D /* UIKit.framework */; };
 		EC2CEB931655B07E000F2C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB921655B07E000F2C5D /* Foundation.framework */; };
 		EC2CEB951655B07E000F2C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2CEB941655B07E000F2C5D /* CoreGraphics.framework */; };
@@ -71,6 +73,10 @@
 		2C6A1B55165700CC00E8D798 /* RoSDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoSDataController.m; sourceTree = "<group>"; };
 		2C99E96E165868F400211AEE /* InstanceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDetailViewController.h; sourceTree = "<group>"; };
 		2C99E96F165868F400211AEE /* InstanceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDetailViewController.m; sourceTree = "<group>"; };
+		2CEB87F41658F55B00926570 /* AddMedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMedicationViewController.h; sourceTree = "<group>"; };
+		2CEB87F51658F55B00926570 /* AddMedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedicationViewController.m; sourceTree = "<group>"; };
+		2CEB87F61658F55B00926570 /* SingleMedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleMedicationViewController.h; sourceTree = "<group>"; };
+		2CEB87F71658F55B00926570 /* SingleMedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleMedicationViewController.m; sourceTree = "<group>"; };
 		EC2CEB8C1655B07E000F2C5D /* appointments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appointments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2CEB901655B07E000F2C5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC2CEB921655B07E000F2C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +137,10 @@
 		2C66E9C816571E6A005EE003 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
+				2CEB87F41658F55B00926570 /* AddMedicationViewController.h */,
+				2CEB87F51658F55B00926570 /* AddMedicationViewController.m */,
+				2CEB87F61658F55B00926570 /* SingleMedicationViewController.h */,
+				2CEB87F71658F55B00926570 /* SingleMedicationViewController.m */,
 				2C0910AC16570F0400A1799D /* Medication.h */,
 				2C0910AD16570F0400A1799D /* Medication.m */,
 				2C0910AE16570F0400A1799D /* MedicationDataController.h */,
@@ -333,6 +343,8 @@
 				2C4607CE165830CE0089F7FD /* InstanceDataController.m in Sources */,
 				2C4607D516583E7D0089F7FD /* NewInstanceViewController.m in Sources */,
 				2C99E970165868F500211AEE /* InstanceDetailViewController.m in Sources */,
+				2CEB87F81658F55B00926570 /* AddMedicationViewController.m in Sources */,
+				2CEB87F91658F55B00926570 /* SingleMedicationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
