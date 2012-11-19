@@ -35,6 +35,10 @@ BOOL editingMode = NO;
         self.timeField.userInteractionEnabled = NO;
         self.doctorNameField.userInteractionEnabled = NO;
         self.additionalInformation.editable = NO;
+        _appt.description = _additionalInformation.text;
+        _appt.date   = _dateField.text;
+        _appt.time = _timeField.text;
+        _appt.doctorName = _doctorNameField.text;
         self.navigationItem.title = @"Appointment";
     }
 }
