@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\author }}\margl1440\margr1440\vieww11360\viewh11740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 General:\
+No Problem, Lack of energy, unexplained weight loss or weight gain, loss of appetite, fever, night sweats, pain in jaw while eating\
+Heart and blood:\
+No Problems, racing heart, chest pains, swelling of feet or legs, pain in legs with walking\
+Breathing:\
+No Problems, Shortness of breath, night sweats, prolonged cough, prior tuberculosis, pleurisy, oxygen at home, coughing up blood\
+Stomach and Intestines:\
+No Problems, heartburn, constipation, intolerance to certain foods, diarrhea, abdominal pain, difficulty swallowing, nausea, vomiting, blood in stools, unexplained change in bowel habits\
+Muscles, Bones, Joints:\
+No Problems, joint pain, aching muscles, shoulder pain, swelling of joints, back pain\
+Head:\
+No Problems, frequent headaches, double vision, dizziness, loss of consciousness, uncontrolled motions, episodes of visual loss\
+Mood and thinking:\
+No Problems, Insomnia, irritability, depression, recurrent bad thoughts, mood swings, hallucinations}
