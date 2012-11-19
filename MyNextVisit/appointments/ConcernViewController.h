@@ -10,9 +10,17 @@
 #import "Concern.h"
 #import "ConcernDataController.h"
 @class ConcernDataController;
-@interface ConcernViewController : UITableViewController
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *Edit;
+@interface ConcernViewController : UIViewController <UITableViewDataSource,UITableViewDelegate> {
+    UITableView *myTableView;
+    UISegmentedControl *segmentedControl;
+    NSInteger selectedSegment;
+    
+    NSArray *selected;
+    NSMutableArray *current;
+    
+}
 @property (strong,nonatomic) ConcernDataController *dataController;
-//-(IBAction)EditingMode;
--(IBAction)toggleEditMode;
+@property (strong,nonatomic) IBOutlet UITableView *myTableView;
+
+- (IBAction)segmentAction:(id)sender;
 @end

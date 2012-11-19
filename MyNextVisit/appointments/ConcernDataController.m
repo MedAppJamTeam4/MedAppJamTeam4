@@ -32,7 +32,7 @@
     self.masterConcernsList = concernsList;
     Concern *concern;
     NSDate *today = [NSDate date];
-    concern = [[Concern alloc] initWithName:@"My Head" status:@"Current" date:today instances:nil isRoS:NO];
+    concern = [[Concern alloc] initWithName:@"My Head" status:@"Addressed" date:today instances:nil isRoS:NO];
     [self addConcernWithConcern:concern];
 }
 
@@ -43,7 +43,9 @@
     }
 }
 
-
+- (void)setToAddressed:(Concern *)concern {
+    concern.status = @"Addressed";
+}
 
 
 
@@ -58,7 +60,7 @@
 
 - (void)addConcernWithConcern:(Concern *)concern {
     [self.masterConcernsList addObject:concern];
-
+    
 }
 
 
